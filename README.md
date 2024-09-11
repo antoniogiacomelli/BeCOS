@@ -13,10 +13,9 @@ It is a proof of concept for smart card operating systems. Highlights are:
   2. A "Program" (application) is a set of processes scheduled based the on the first APDU request from the reader, to load an application.
   3. A "Process" (in the loose sense) is a co-routine aggregated to a queue.
   
-  *The rationale for (2) and (3) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
+  *The rationale for (ii) and (iii) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
   
-
-The HAL is written with proxy design patterns for hardware access.
+The HAL is written with proxy design patterns for hardware access, providing easy portability. 
     
     
     
