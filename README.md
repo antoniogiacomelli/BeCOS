@@ -18,5 +18,6 @@ It is a proof of concept for smart card operating systems. Highlights are:
   
 The HAL is written with proxy design patterns for hardware access, providing easy portability. 
     
-    
+    ![uml](https://github.com/user-attachments/assets/10b762cc-2349-4580-9968-a536562a017f)
+
     
