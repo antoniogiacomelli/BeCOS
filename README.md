@@ -3,7 +3,7 @@
 
 This work has been presented as my final paper as a partial requirement for the Software Engineering Specialist title.
 
-It is a proof of concept for smart card operating systems. Highlights are:
+It is a proof of concept for a extensible smart card operating systems Highlights are:
 
 * A low-coupled object-based design
 * Client-server oriented
@@ -18,6 +18,6 @@ It is a proof of concept for smart card operating systems. Highlights are:
   
 The HAL is written with proxy design patterns for hardware access, providing easy portability. Note that the class Transceiver is still on the application layer, the Program class is not coupled to the hardware. A transceiver is an abstract data type, integrated to the HAL using DIP.
     
-
+The PoC was deployed on an Atmega328p, 2KB RAM. 
     
 ![uml](https://github.com/antoniogiacomelli/BeCOS/blob/main/uml2.png)
