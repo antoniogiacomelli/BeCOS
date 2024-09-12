@@ -11,12 +11,12 @@ It is a proof of concept for smart card operating systems. Highlights are:
 * The chosen abstractions
   1. A polymorphic communication channel - the communication to the reader is transparent to the application.
   2. A "Program" (application) is a set of processes scheduled based the on the first APDU request from the reader, to load an application. (after handshake for communication is established)
-  3. A "Process" (in the loose sense) is a co-routine aggregated to a queue.
+  3. A "Process" (in the loose sense) is a co-routine aggregated to a pipe.
   4. The command-response pattern in this domain, allows a single-thread of execution (on the unprivileged level) to be used. This aligns with stringent memory constraints.
   
   *The rationale for (ii) and (iii) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
   
-The HAL is written with proxy design patterns for hardware access, providing easy portability. 
+The HAL is written with proxy design patterns for hardware access, providing easy portability. Note that the class Transceiver is still on the application layer, the Program class is not coupled to the hardware.
     
 
     
