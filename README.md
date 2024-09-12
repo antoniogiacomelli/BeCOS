@@ -20,4 +20,4 @@ The HAL is written with proxy design patterns for hardware access, providing eas
     
 
     
-![uml](https://github.com/antoniogiacomelli/BeCOS/blob/main/uml.png)
+![uml](https://github.com/antoniogiacomelli/BeCOS/blob/main/uml2.png)
