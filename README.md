@@ -17,7 +17,7 @@ It is a proof of concept for a extensible smart card operating systems Highlight
   *The rationale for (ii) and (iii) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
   *Messages are always exchanged as a stream of bytes.*
   
-The HAL is written with proxy design patterns for hardware access, providing easy portability. Note that the class Transceiver is still on the application layer, the Program class is not coupled to the hardware. A transceiver is an abstract data type, integrated to the HAL using DIP.
+The HAL is written with proxy design patterns for hardware access, providing easy portability. Note that the class Transceiver is still on the application layer, the Program class is not coupled to the hardware. A transceiver is an abstract data type, dedoupled from to the HAL by dependency inversion.
     
 The PoC was deployed on an Atmega328p, 2KB RAM. 
     
