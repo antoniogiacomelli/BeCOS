@@ -15,6 +15,7 @@ It is a proof of concept for a extensible smart card operating systems Highlight
   4. The command-response pattern in this domain, allows a single-thread of execution (on the unprivileged level) to be used. This aligns with stringent memory constraints.
   
   *The rationale for (ii) and (iii) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
+  *Messages are always exchanged as a stream of bytes.*
   
 The HAL is written with proxy design patterns for hardware access, providing easy portability. Note that the class Transceiver is still on the application layer, the Program class is not coupled to the hardware. A transceiver is an abstract data type, integrated to the HAL using DIP.
     
