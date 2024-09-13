@@ -14,10 +14,10 @@ It is a proof of concept for a extensible smart card operating systems Highlight
   3. A "Process" (in the loose sense) is a set of co-routines aggregated to a pipe.
   4. The command-response pattern in this domain, allows a single-thread of execution (on the unprivileged level) to be used. This aligns with stringent memory constraints.
   
-  *The rationale for (ii) and (iii) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
-  *Messages are always exchanged as a stream of bytes.*
-  *Processes will always receive and or send messages, therefore, no process is being obliged to attach to an interface they won't use.*
-  *The use of 'malloc' instead of static pools does not hinder response-time because it is used only once to create objects on system initialisation.*
+  * *The rationale for (ii) and (iii) is because pipes-and-filters design pattern fits well smart card applications, mainly those for access control and identification.*
+  * *Messages are always exchanged as a stream of bytes.*
+  * *Processes will always receive and or send messages, therefore, no process is being obliged to attach to an interface they won't use.*
+  * *The use of 'malloc' instead of static pools does not hinder response-time because it is used only once to create objects on system initialisation.*
   
 The HAL is written with proxy design patterns for hardware access, providing easy portability. Note that the class Transceiver is still on the application layer, the Program class is not coupled to the hardware. A transceiver is an abstract data type, dedoupled from to the HAL by dependency inversion.
     
